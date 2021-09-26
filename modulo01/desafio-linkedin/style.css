@@ -1,19 +1,25 @@
-body {
-    font-family: 'Roboto', sans-serif;
+html {
     width: 100vw;
-    font-size: 16px;
-    margin: 38px 26px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f2ef;
+}
+
+body {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 40px;
 }
 
 .navbar {
     display: flex;
-    align-items: center;
-    column-gap: 20%;
+    align-content: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
-    background: #fff;
+    background-color: #fff;
     width: 100%;
     padding-top: 12px;
+    z-index: 100;
 }
 
 .navbar-left {
@@ -23,6 +29,7 @@ body {
 .navbar-right {
     display: flex;
     column-gap: 20px;
+    transform: translateX(-25%);
 }
 
 #linkedin-logo {
@@ -45,7 +52,7 @@ input:focus {
     align-items: center;
     justify-content: flex-start;
     border: solid 1px;
-    width: 280px;
+    width: 235px;
     height: 34px;
     padding-left: 15px;
 }
@@ -69,32 +76,87 @@ header img {
     line-height: 5px;
 }
 
-#backgroud-image {
-    display: flex;
-    width: 100%;
+.banner {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    background-color: #fff;
+    width: 1080px;
+    margin-top: 70px;
+}
+
+#background-image {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 #profile-picture {
+    border: 4px solid #fff;
     border-radius: 50%;
-    width: 106.64px;
-    height: 106.64px;
+    width: 152px;
+    height: 152px;
     position: absolute;
-    top: 200px;
-    left: 30px;
+    top: 250px;
+    left: 110px;
 }
 
 .banner h1 {
-    margin-top: 50px;
+    margin-top: 90px;
+    padding-left: 22px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 10px;
+}
+
+.banner h2 {
+    padding-left: 22px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 10px;
+}
+
+.banner h3 {
+    padding-left: 22px;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 22px;
 }
 
 button {
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+button:hover {
+    background-color: #ebebeb;
 }
 
 #tenho-interesse-em {
     background-color: #0a66c2;
     color: #fff;
+    border-style: none;
+}
+
+#tenho-interesse-em:hover {
+    background-color: #004182;
+}
+
+.content {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    background-color: #fff;
+    margin-top: 34px;
+    padding-left: 22px;
+    width: 1060px;
+    font-size: 16px;
+    padding-bottom: 20px;
 }
 
 .content img {
@@ -102,26 +164,51 @@ button {
     height: 56px;
 }
 
+.content h2 {
+    font-weight: 400;
+}
+
+.item {
+    display: flex;
+    flex-flow: row;
+    column-gap: 30px;
+}
+
 .experiencia {
-    margin-bottom: 50px;
-}
-
-.experiencia-item {
-    display: flex;
-    flex-flow: row;;
-    column-gap: 20px;
-}
-
-.formacao-academica-item {
-    display: flex;
-    flex-flow: row;;
-    column-gap: 20px;
+    margin-bottom: 80px;
 }
 
 .description {
     display: flex;
     justify-content: flex-start;
     flex-flow: column;
+    line-height: 0px;
+}
+
+.description h3 {
+    font-weight: 500;
+}
+
+.empresa {
     font-weight: 400;
-    line-height: 0.5px;
+}
+
+.periodo {
+    font-weight: 100;
+}
+
+.local {
+    font-weight: 100;
+}
+
+.atividade {
+    font-weight: 300;
+}
+
+.curso {
+    font-weight: 300;
+}
+
+.duracao {
+    font-weight: 100;
 }
