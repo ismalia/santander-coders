@@ -138,11 +138,11 @@ const resultObject = (data) => {
     const resultObj = {
         total: totalResult,
         stateCount: stateCountResult,
-        infosPerState: []
+        infosPerState: [{}]
     }
 
-    for (let i = 0; i < uniqueStates.length; i++) {
-        resultObj.infosPerState.push(stateObj(uniqueStates[i]))
+    for (let uniqueState of uniqueStates) {
+        resultObj.infosPerState[0] = Object.assign(resultObj.infosPerState[0], stateObj(uniqueState))
     }
     
     return resultObj
