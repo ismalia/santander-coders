@@ -120,6 +120,6 @@ const todos = [
     }
 ];
 
-  const countCompletedToDos = todos.reduce((total, {completed}) => completed ? ++total : total, 0)
+const countCompletedToDos = todos.reduce((total, {completed}) => completed ? ++total : total, 0)
 
-  console.log(countCompletedToDos)
+console.log(countCompletedToDos)
