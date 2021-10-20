@@ -55,9 +55,9 @@ const getVotersCounts = (array) => {
     let under60Count = 0
 
     array.map(({age, voted}) => {
-        if (age < 25 && voted) under25Count++
-        else if (age >= 25 && age < 40 && voted) under40Count++
-        else if (age >= 40 && age < 60 && voted) under60Count++
+        if (age < 25 && voted) ++under25Count
+        else if (age >= 25 && age < 40 && voted) ++under40Count
+        else if (age >= 40 && age < 60 && voted) ++under60Count
     })
 
     return {
@@ -68,3 +68,58 @@ const getVotersCounts = (array) => {
 }
 
 console.log(getVotersCounts(voters))
+
+// 4. Calcule o número de todas as tarefas já concluídas:
+
+const todos = [
+    {
+        "userId": 10,
+        "id": 1,
+        "title": "delectus aut autem",
+        "completed": false
+    }, {
+        "userId": 7,
+        "id": 2,
+        "title": "quis ut nam facilis et officia qui",
+        "completed": true
+    }, {
+        "userId": 1,
+        "id": 3,
+        "title": "fugiat veniam minus",
+        "completed": false
+    }, {
+        "userId": 2,
+        "id": 4,
+        "title": "et porro tempora",
+        "completed": true
+    }, {
+        "userId": 2,
+        "id": 5,
+        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+        "completed": false
+    }, {
+        "userId": 1,
+        "id": 6,
+        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+        "completed": false
+    }, {
+        "userId": 31,
+        "id": 7,
+        "title": "illo expedita consequatur quia in",
+        "completed": false
+    }, {
+        "userId": 90,
+        "id": 8,
+        "title": "quo adipisci enim quam ut ab",
+        "completed": true
+    }, {
+        "userId": 90,
+        "id": 9,
+        "title": "molestiae perspiciatis ipsa",
+        "completed": false
+    }
+];
+
+  const countCompletedToDos = todos.reduce((total, {completed}) => completed ? ++total : total, 0)
+
+  console.log(countCompletedToDos)
